@@ -1,0 +1,33 @@
+{
+    "name": "opengeek/slim-minimal-website",
+    "description": "minimal skeleton for a Slim website",
+    "minimum-stability": "stable",
+    "prefer-stable": true,
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "opengeek",
+            "email": "jason@opengeek.com"
+        }
+    ],
+    "config": {
+        "optimize-autoloader": false,
+        "sort-packages": true
+    },
+    "autoload": {
+        "psr-4": {
+            "Opengeek\\": "src/"
+        },
+        "files": [
+            "src/functions.php"
+        ]
+    },
+    "require": {
+        "php": "^8.2",
+        "php-di/php-di": "^7.0",
+        "slim/psr7": "^1.6",
+        "slim/slim": "^4.12",
+        "slim/twig-view": "^3.3",
+        "vlucas/phpdotenv": "^5.5"
+    }
+}
