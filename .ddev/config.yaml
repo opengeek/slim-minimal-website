@@ -1,0 +1,12 @@
+name: slim-minimal-website
+type: php
+docroot: public
+php_version: "8.2"
+webserver_type: nginx-fpm
+xdebug_enabled: false
+additional_hostnames: []
+additional_fqdns: ['minimal-website.slim.test']
+use_dns_when_possible: true
+composer_version: "2"
+web_environment: []
+nodejs_version: "18"
