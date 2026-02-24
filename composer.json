@@ -24,10 +24,12 @@
     },
     "require": {
         "php": "^8.3",
+        "mnapoli/silly": "^1.8",
         "php-di/php-di": "^7.0",
         "slim/psr7": "^1.6",
         "slim/slim": "^4.12",
         "slim/twig-view": "^3.3",
+        "symfony/finder": "^7.0",
         "vlucas/phpdotenv": "^5.5"
     }
 }

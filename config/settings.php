@@ -17,7 +17,13 @@ return static function(string $appEnv) {
     if ($appEnv === 'DEVELOPMENT' || $appEnv === 'TEST') {
         $settings['di_compilation_path'] = '';
         $settings['display_error_details'] = true;
+        $settings['twig']['cache'] = false;
     }
+
+    $settings['caches'] = [
+        $settings['di_compilation_path'],
+        $settings['twig']['cache'],
+    ];
 
     return $settings;
 };
