@@ -1,5 +1,5 @@
 <?php
 
 return function (\Slim\App $app) {
-    $app->get('/[{name}/]', \Opengeek\Slim\Hello::class)->setName('Hello');
+    $app->get('/[{name}/]', \Opengeek\Controllers\Home::class)->setName('Home');
 };
