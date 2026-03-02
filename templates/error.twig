@@ -1,0 +1,15 @@
+{% extends 'base.twig' %}
+
+{% block body %}
+<div class="container">
+
+    <h1>{{ title }}</h1>
+
+    <p>{{ description }}</p>
+
+    <pre>
+{{ exception.trace }}
+    </pre>
+
+</div>
+{% endblock body %}
