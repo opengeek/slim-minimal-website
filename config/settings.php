@@ -7,7 +7,16 @@ return static function(string $appEnv) {
         'app_version' => version(),
         'di_compilation_path' => __DIR__ . '/../var/compiled',
         'display_error_details' => false,
+        'log_error_details' => false,
         'log_errors' => true,
+
+        'logger' => [
+            'name' => 'web',
+            'path' => __DIR__ . '/../var/log/error.log',
+            'level' => \Monolog\Logger::ERROR,
+            'max_files' => 7,
+            'use_locking' => true,
+        ],
 
         'twig' => [
             'cache' => __DIR__ . '/../var/twig/cache'
@@ -18,6 +27,8 @@ return static function(string $appEnv) {
         $settings['di_compilation_path'] = '';
         $settings['display_error_details'] = true;
         $settings['twig']['cache'] = false;
+        $settings['logger']['level'] = \Monolog\Logger::DEBUG;
+        $settings['logger']['use_locking'] = false;
     }
 
     $settings['caches'] = [

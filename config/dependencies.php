@@ -18,6 +18,25 @@ return static function (\DI\ContainerBuilder $containerBuilder, array $settings)
 
                 return $twig;
             },
+
+            \Psr\Log\LoggerInterface::class => function (\Psr\Container\ContainerInterface $c) {
+                $settings = $c->get('settings');
+
+                $loggerSettings = $settings['logger'];
+                $logger = new \Monolog\Logger($loggerSettings['name']);
+
+                $handler = new \Monolog\Handler\RotatingFileHandler(
+                    $loggerSettings['path'],
+                    (int) ($loggerSettings['max_files'] ?? 7),
+                    $loggerSettings['level'] ?? \Monolog\Logger::ERROR,
+                    true,
+                    null,
+                    $loggerSettings['use_locking'] ?? false
+                );
+                $logger->pushHandler($handler);
+
+                return $logger;
+            },
         ]
     );
 };

@@ -25,6 +25,7 @@
     "require": {
         "php": "^8.3",
         "mnapoli/silly": "^1.8",
+        "monolog/monolog": "^2.11",
         "php-di/php-di": "^7.0",
         "slim/psr7": "^1.6",
         "slim/slim": "^4.12",
