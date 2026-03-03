@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Opengeek\Handlers;
 
 use Opengeek\Exceptions\HttpException;

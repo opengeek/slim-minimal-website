@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 return static function (\Slim\App $app) {
     $app->add(\Slim\Views\TwigMiddleware::createFromContainer($app, \Slim\Views\Twig::class));
 

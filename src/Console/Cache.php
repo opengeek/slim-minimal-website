@@ -1,4 +1,14 @@
 <?php
+/*
+ * The file is part of the slim-minimal-website package.
+ *
+ * Copyright (c) Jason Coward <jason@opengeek.com>. All Rights Reserved
+ *
+ * For the full copyright and license information, see the COPYRIGHT and LICENSE
+ * files found in the top-level directory of this distribution.
+ */
+
+declare(strict_types=1);
 
 namespace Opengeek\Console;
 
@@ -7,9 +17,9 @@ use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Finder\Finder;
 
-class Cache
+readonly class Cache
 {
-    public function __construct(private readonly Configuration $configuration)
+    public function __construct(private Configuration $configuration)
     {
     }
 
