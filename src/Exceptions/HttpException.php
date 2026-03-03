@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Opengeek\Exceptions;
 
 use Psr\Http\Message\ServerRequestInterface;

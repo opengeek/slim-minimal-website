@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Opengeek\Controllers;
 
 use Opengeek\Configuration;
@@ -8,11 +10,11 @@ use Psr\Http\Message\ServerRequestInterface;
 use Slim\Psr7\Response;
 use Slim\Views\Twig;
 
-class Home
+readonly class Home
 {
     public function __construct(
-        private readonly Configuration $configuration,
-        private readonly Twig $twig
+        private Configuration $configuration,
+        private Twig $twig
     ) {
     }
 

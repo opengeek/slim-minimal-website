@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 return static function(string $appEnv) {
     $settings = [
         'app_env' => $appEnv,
